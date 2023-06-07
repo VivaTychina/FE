@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ГОРЯЧИЕ ТУРЫ</title>
+  <style>
+    body {
+      ackground-color: rgba(255, 255, 255, 0.5);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header {
+      background-color: rgba(222, 21, 21, 0.5);
+      padding: 20px;
+      text-align: center;
+    }
+
+   h1 {
+      font-size: 30px;
+      color: #660000;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 30px;
+      color: #8f1313;
+      margin: 0;
+      background-color: #FF6347(222);
+    }
+
+    section h2 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    article {
+      margin-bottom: 20px;
+    }
+    article h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    article img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    article img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    a {
+      color: #FF6347;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+
+    body {
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    section article {
+      display: inline-block;
+      width: 30%;
+      margin: 10px;
+      text-align: center;
+    }
+
+    section article img {
+      width: 100%;
+      height: auto;
+    }
+ 
