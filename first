@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ГОРЯЧИЕ ТУРЫ</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header>
+    <h1>ГОРЯЧИЕ ТУРЫ</h1>
+  </header>
+
+  <main>
+    <section>
+      
+      <article>
+        <h1><a href="https://www.booking.com/country/tr.ru.html?aid=319915;label=tr-EzdxcG77DnOUc1xzTUAHfQS390408492603:pl:ta:p112300:p2260.000:ac:ap:neg:fi:tikwd-7716593971:lp9042208:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YdQLqCSGZAFDHKNAytkZCCU;ws=&gclid=CjwKCAjwsvujBhAXEiwA_UXnABaPsj7wT7a32DzRtmjZddV_HCqP5P6Pr0Hh0xTaz20LAQvm5TQCzBoCpSUQAvD_BwE">Турция</a></h1>
+
+        <a href="https://www.booking.com/country/tr.ru.html?aid=319915;label=tr-EzdxcG77DnOUc1xzTUAHfQS390408492603:pl:ta:p112300:p2260.000:ac:ap:neg:fi:tikwd-7716593971:lp9042208:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YdQLqCSGZAFDHKNAytkZCCU;ws=&gclid=CjwKCAjwsvujBhAXEiwA_UXnABaPsj7wT7a32DzRtmjZddV_HCqP5P6Pr0Hh0xTaz20LAQvm5TQCzBoCpSUQAvD_BwE"><img src="ТУРЦИЯ САЙТ.webp" alt="Турция"></a>
+    
+      </article>
+
+      <article>
+        <h2><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjy0vX4sa__AhUYme0KHXTVDhsYABACGgJkZw&ae=2&ohost=www.google.com&cid=CAESauD2LdhLVWLjsrV5Ta5BZG1ixk00G3qtxOqeGHYNswUBh9tkTO7F7YmuUXh2KVP02zg7nR9rRJ18U8lXBsdlb6mF7uGEn0D9lEqwcFwjfgSYiQSPu-IvE2wgr88E8OPN7HNFOtXUTTtPHI4&sig=AOD64_0rF5I3RtRAnP_W7-j87VNG30W6Ew&q&adurl&ved=2ahUKEwjE_O74sa__AhXBh1wKHcXOCrUQ0Qx6BAgJEAM&nis=2&dct=1">Египет</a></h2>
+        <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjy0vX4sa__AhUYme0KHXTVDhsYABACGgJkZw&ae=2&ohost=www.google.com&cid=CAESauD2LdhLVWLjsrV5Ta5BZG1ixk00G3qtxOqeGHYNswUBh9tkTO7F7YmuUXh2KVP02zg7nR9rRJ18U8lXBsdlb6mF7uGEn0D9lEqwcFwjfgSYiQSPu-IvE2wgr88E8OPN7HNFOtXUTTtPHI4&sig=AOD64_0rF5I3RtRAnP_W7-j87VNG30W6Ew&q&adurl&ved=2ahUKEwjE_O74sa__AhXBh1wKHcXOCrUQ0Qx6BAgJEAM&nis=2&dct=1"><img src="САЙТ ЕГИПЕТ.jpeg" alt="Египет"></a>
+      </article>
+
+      <article>
+        <h3><a href="https://www.booking.com/country/it.ru.html?aid=319915;label=it-xxPMO_HSydkw9FmMXvxGUQS500149414778:pl:ta:p1109700:p2:ac:ap:neg:fi:tikwd-2256677875:lp9042208:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YdQLqCSGZAFDHKNAytkZCCU;ws=&gclid=CjwKCAjwsvujBhAXEiwA_UXnAIg2oWx_XMVrbqLV4ED91l-7A3YK8664rLGcqNgibIiWuYOMtMwpohoCyS0QAvD_BwE">Италия</a></h3>
+        <a href="https://www.booking.com/country/it.ru.html?aid=319915;label=it-xxPMO_HSydkw9FmMXvxGUQS500149414778:pl:ta:p1109700:p2:ac:ap:neg:fi:tikwd-2256677875:lp9042208:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YdQLqCSGZAFDHKNAytkZCCU;ws=&gclid=CjwKCAjwsvujBhAXEiwA_UXnAIg2oWx_XMVrbqLV4ED91l-7A3YK8664rLGcqNgibIiWuYOMtMwpohoCyS0QAvD_BwE"><img src="ИТАЛИЯ САЙТ.jpeg" alt="ИТАЛИЯ"></a>
+      </article>
+    </section>
+  </main>
+
+  
+
+  <div class="werty">
+    <div id="header">
+    <h2 align="left">Кликните, чтобы перейти к нужному разделу и узнать подробности:</h2>
+    </div>
+    <div id="spisok">
+    <ul class="nav">
+    <li><a href="https://teztour.moscow/turistam/dokumenty-dlya-puteshestviya/">ДОКУМЕТЫ</a></li>
+    <li><a href="http://happytravelling.org/texnika-dlya-puteshestvij/">ТЕХНИКА</a></li>
+    <li><a href="https://poshyk.info/poleznie-veshi-dlia-puteshestviy/">МЕЛОЧИ</a></li>
+    <li><a href="https://www.cleanipedia.com/ru/snaruzhi-doma/gigiena-v-puteshestvii.html">ГИГИЕНА</a></li>
+    <li><a href="https://travelinlife.ru/book/?page=41">ОДЕЖДА И ОБУВЬ</a></li>
+    </ul>
+    </div>
+    <div id="l">
+    <h3 style="text-align:center">«Ничто так не развивает ум, как путешествие» – Эмиль Золя</h3>
+    <p>Список вещей в путешествие — как ингредиенты для сытного блюда. Чтобы получился вкусный ужин, смешайте отборные продукты в правильных пропорциях. </p>
+    <p style="text-align:center"><a href="https://www.ef.ru/blog/language/50-luchshih-citat/">«Посмотри на мир. Он куда удивительнее cнов» – Рэй Брэдберри.</a></p>
+    </div>
+    <div id="r">
+    <h3 style="text-align:center">СОБИРАЕМСЯ</h3>
+    
+    <p>Когда все вещи разложены, можно начинать их собирать. Разделите вещи на 2 части: то, что будете носить с собой (ручная кладь) и то, что сдадите в багаж.
+
+      В ручную кладь надо взять: деньги, документы, технику (телефоны, фотоаппарат, ноутбук и далее по списку), самое необходимое из лекарств, средств личной гигиены, блокнот и ручку. Если вы летите самолетом, то в ручной клади не должно быть ничего колюще-режущего и жидкого.</p>
+    <p style="text-align:center"><a href="https://www.ef.ru/blog/language/50-luchshih-citat/">«Цель – не место, а способность смотреть на мир по-другому» – Генри Миллер.</a></p>
+    </div>
+    <img src="images/fon.jpg" alt="" hspace="36" />
+    <p id="bottom">Упакуйте все жидкости в плотные пакеты, одежду, обувь и остальное содержимое распределите равномерно, для нижнего белья в большинстве чемоданов есть специальный карман. Многие советуют скручивать одежду в рулоны, я складываю стопкой, заполняя промежутки чулочно-носочными изделиями.
+
+      Вниз чемодана кладите то, что будете доставать в последнюю очередь. Сверху положите складную сумку, при перевесе в нее можно будет переложить часть вещей, а потом использовать для походов на пляж или по магазинам.
+      
+      </p>
+    </div>
+
+
+    <footer>
+      <p>ТРЕВЕЛ БЛОГ &copy; 2023 JUNI</p>
+    </footer>
+
+</body>
+</html>
+
+
