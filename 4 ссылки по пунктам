@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <title>Viva 4</title>
+  
+</head>
+<body>
+    <style>
+        body {
+          
+          background-color: burlywood;
+          height: 100vh;
+          
+        }
+        
+        .links-container {
+          text-align: left;
+        }
+        
+        .automobil {
+          color: blue;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 30px;
+          display: block;
+          margin-bottom: 20px;
+        }
+        
+        .automobil:hover {
+          color: green;
+        }
+        
+        .aviabiletu {
+          color: blue;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 30px;
+          display: block;
+          margin-bottom: 20px;
+        }
+        
+        .aviabiletu:hover {
+          color: red;
+          text-decoration: line-through;
+        }
+        
+        .ekskursii {
+          color: blue;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 30px;
+          display: block;
+          margin-bottom: 20px;
+        }
+        
+        .ekskursii:hover {
+          color: red;
+          text-decoration: underline overline;
+        }
+      </style>
+</head>
+<body>
+  <div class="links-container">
+    <a class="automobil" href="#">Орендовать автомобить</a>
+    <a class="aviabiletu" href="#">Купить авиабилеты</a>
+    <a class="ekskursii" href="#">Подобрать экскурсии</a>
+  </div>
+</body>
+</html>
