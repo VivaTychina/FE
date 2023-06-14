@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIVA 2 valuta</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h2>ВАЛЮТА</h2>
+    <ul type="list">
+        <li>€ (EUR) - Евро (Страны Европы)</li>
+        <li>$ (USD) - Доллар (США)</li>
+        <li>£ (GBP) - Фунт стерлингов (Великобритания)</li>
+        <li>¥ (JPY) - Иена (Япония)</li>
+        <li>₾ (GEL) - Лари (Грузия)</li>
+    </ul>
+
+    <h2>Курс на сегодня</h2>
+    <table class="table">
+        <tr>
+            <th align="center">Флаг</th>
+            <th align="center">Валюта</th>
+            <th align="center">Курс</th>
+        </tr>
+        
+            <tr><td><img src="flag-of-usa-or-united-states-of-america-background_53500-169.webp"><img src="1.png"></td><td>$ (USD)/€ (EUR)</td><td>0,93€</td></tr> 
+            <tr><td><img src="Flag_of_the_United_Kingdom_(1-2).png"><img src="1.png"></td><td>£ (GBP)/€ (EUR)</td><td>1,17€</td></tr>
+            <tr><td><img src="Flag_of_Japan.png"><img src="1.png"></td><td>¥ (JPY)/€ (EUR)</td><td>0,0073€</td></tr>
+            <tr><td><img src="Flag_of_Georgia.png"><img src="1.png"></td><td>₾ (GEL)/€ (EUR)</td><td>0,32€</td></tr>
+           
+      
+
+    </table>
+    
+    
+</body>
+</html>
