@@ -1,0 +1,656 @@
+//Составьте программу, которая 
+присваивает переменной d значение 7, а затем выводит на экран: в первой строке - 
+это значение, во второй – квадрат этого значения,
+ в третьей – куб этого значения.
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <body>
+        <div class="container">
+            <button id="calculateBtn">Посчитать</button>
+            <div id="result"></div>
+        </div>
+    </body>
+
+    <style>
+        body {
+            background-color: #d092a7;
+        }
+        
+        .container {
+            background-color: #b7d9bc;
+            text-align: center;
+        }
+        
+        button {
+            background-color: #70c7e9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var button = document.getElementById("calculateBtn");
+            var resultDiv = document.getElementById("result");
+            
+            button.addEventListener("click", function() {
+                var d = 7;
+                var square = d * d;
+                var cube = d * d * d;
+                
+                resultDiv.innerHTML = "Значение: " + d + "<br>" +
+                                      "Квадрат: " + square + "<br>" +
+                                      "Куб: " + cube;
+            });
+        });
+    </script>
+</head>
+
+</html>
+
+
+//Составьте программу, которая принимает с клавиатуры целое число и, если оно положительное, увеличивает его вдвое.
+Программа должна выводить на экран новое значение.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #90e2bd;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #70c7e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #fff;
+            color: #70c7e9;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    
+    <script>
+        function increaseNumber() {
+            var number = parseInt(prompt("Введите целое число:"));
+            
+            if (number > 0) {
+                number = number * 2;
+            }
+            
+            document.getElementById("result").innerHTML = "Новое значение: " + number;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="increaseNumber()">Увеличить</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
+
+
+//Составьте программу, которая принимает 
+с клавиатуры два целых числа и, если первое больше второго, 
+выводит на экран их сумму, если же наоборот – выводит на экран их произведение.
+В случае же, если числа одинаковы, программа выводит на экран сообщение "числа одинаковые"
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f2f7fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #70c7e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #fff;
+            color: #70c7e9;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    
+    <script>
+        function calculateResult() {
+            var number1 = parseInt(prompt("Введите первое целое число:"));
+            var number2 = parseInt(prompt("Введите второе целое число:"));
+            
+            if (number1 > number2) {
+                var sum = number1 + number2;
+                document.getElementById("result").innerHTML = "Сумма: " + sum;
+            } else if (number1 < number2) {
+                var product = number1 * number2;
+                document.getElementById("result").innerHTML = "Произведение: " + product;
+            } else {
+                document.getElementById("result").innerHTML = "Числа одинаковые";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="calculateResult()">Вычислить</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
+
+
+Составьте программу, которая принимает с клавиатуры целое число и выводит на экран
+ его квадрат – но только в том случае, если введенное число отрицательно. 
+В противном случае – на экран выводится сообщение "ошибка".
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f2f7fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #70c7e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #fff;
+            color: #70c7e9;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    
+    <script>
+        function calculateSquare() {
+            var number = parseInt(prompt("Введите целое число:"));
+            
+            if (number < 0) {
+                var square = number * number;
+                document.getElementById("result").innerHTML = "Квадрат числа: " + square;
+            } else {
+                document.getElementById("result").innerHTML = "Ошибка";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="calculateSquare()">Вычислить</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
+
+//Составьте программу, которая принимает с клавиатуры два числа: первое – количество учеников в классе, второе – количество стульев в кабинете. 
+Программа проверит соответствие между этими двумя значениями и выведет на экран соответствующую информацию.
+ввод: 24, 28 ⇒ вывод: стульев хватает; ввод: 24, 22 ⇒ вывод: стульев не хватает)
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f2f7fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #70c7e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #fff;
+            color: #70c7e9;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    
+    <script>
+        function checkAvailability() {
+            var students = parseInt(prompt("Введите количество учеников:"));
+            var chairs = parseInt(prompt("Введите количество стульев:"));
+            
+            if (students <= chairs) {
+                document.getElementById("result").innerHTML = "Стульев хватает";
+            } else {
+                document.getElementById("result").innerHTML = "Стульев не хватает";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="checkAvailability()">Проверить</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
+
+
+
+//Составьте программу, которая выводит на экран все однозначные положительные числа в возрастающем порядке. 
+Перед началом вывода на экран следует вывести "старт", а после окончания вывода чисел – "финиш".
+вывод: старт, 1, … 9, финиш
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f2f7fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #70c7e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #fff;
+            color: #70c7e9;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    
+    <script>
+        function printNumbers() {
+            var result = "Старт: ";
+            
+            for (var i = 1; i <= 9; i++) {
+                result += i + ", ";
+            }
+            
+            result += "Финиш";
+            
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="printNumbers()">Вывести числа</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
+
+
+
+//Составьте программу, которая выводит на экран все двузначные положительные числа, 
+делящиеся без остатка на 5 (начиная с наименьшего).
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f2f7fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #70c7e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #fff;
+            color: #70c7e9;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    
+    <script>
+        function printNumbers() {
+            var result = "Числа: ";
+            
+            for (var i = 10; i <= 99; i++) {
+                if (i % 5 === 0) {
+                    result += i + ", ";
+                }
+            }
+            
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="printNumbers()">Вывести числа</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
+
+
+
+//Написать цикл, который выводит те числа из массива, которые больше или равны 15.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f2f7fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #70c7e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #fff;
+            color: #70c7e9;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    
+    <script>
+        function printNumbers() {
+            var numbers = [10, 15, 20, 25, 30];
+            var result = "";
+            
+            for (var i = 0; i < numbers.length; i++) {
+                if (numbers[i] >= 15) {
+                    result += numbers[i] + ", ";
+                }
+            }
+            
+            document.getElementById("result").innerHTML = "Числа: " + result;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="printNumbers()">Вывести числа</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
+
+
+
+//Написать цикл, который выводит только нечетные числа 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f2f7fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #70c7e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #fff;
+            color: #70c7e9;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    
+    <script>
+        function printOddNumbers() {
+            var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            var result = "";
+            
+            for (var i = 0; i < numbers.length; i++) {
+                if (numbers[i] % 2 !== 0) {
+                    result += numbers[i] + ", ";
+                }
+            }
+            
+            document.getElementById("result").innerHTML = "Нечетные числа: " + result;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="printOddNumbers()">Вывести числа</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
+
+
+
+
+//Вывести только те значения массива, индекс которых кратен трем.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #f2f7fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #70c7e9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        button {
+            background-color: #fff;
+            color: #70c7e9;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+    
+    <script>
+        function printValues() {
+            var array = [10, 20, 30, 40, 50, 60];
+            var result = "";
+            
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] % 3 === 0) {
+                    result += array[i] + ", ";
+                }
+            }
+            
+            document.getElementById("result").innerHTML = "Значения: " + result;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="printValues()">Вывести значения</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
