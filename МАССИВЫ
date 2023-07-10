@@ -1,0 +1,525 @@
+
+//Написать программу, которая формирует на основе массива строк множество параграфов и выводит их в интерфейс. При клике на параграф текст должен меняться на звездочки. На данном этапе делать процесс обратимым при повторном клике необязательно.
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .paragraph {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="paragraphs-container"></div>
+
+  <script>
+    
+    var strings = ["Lorem ipsum dolor sit amet", "consectetur adipiscing elit", "sed do eiusmod tempor incididunt", "ut labore et dolore magna aliqua"];
+
+    
+    var container = document.getElementById('paragraphs-container');
+
+    
+    strings.forEach(function(string) {
+      var paragraph = document.createElement('p');
+      paragraph.textContent = string;
+      paragraph.classList.add('paragraph');
+
+     
+      paragraph.addEventListener('click', function() {
+        paragraph.textContent = '***';
+      });
+
+      
+      container.appendChild(paragraph);
+    });
+  </script>
+</body>
+</html>
+//Реализовать 10 карточек с числами от 0 до 9 и при нажатии на какую-либо карточку присвоить ей класс active. В классе active должны быть стили, которые меняют цвет текста и цвет заднего фона местами.
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .card-row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: #f2f2f2;
+      text-align: center;
+      line-height: 100px;
+      font-size: 24px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+    
+    .active {
+      color: #f2f2f2;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card-row">
+      <div class="card">0</div>
+      <div class="card">1</div>
+      <div class="card">2</div>
+    </div>
+    <div class="card-row">
+      <div class="card">3</div>
+      <div class="card">4</div>
+      <div class="card">5</div>
+    </div>
+    <div class="card-row">
+      <div class="card">6</div>
+      <div class="card">7</div>
+      <div class="card">8</div>
+    </div>
+    <div class="card-row">
+      <div class="card">9</div>
+    </div>
+  </div>
+
+  <script>
+    // Получаем все карточки
+    var cards = document.getElementsByClassName('card');
+
+    // Добавляем обработчик события для каждой карточки
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].addEventListener('click', function() {
+        // Добавляем класс active для текущей карточки
+        this.classList.add('active');
+      });
+    }
+  </script>
+</body>
+</html>
+//Доработать прошлый скрипт таким образом, чтобы при повторном нажатии класс active удалялся.
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .card-row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: #f2f2f2;
+      text-align: center;
+      line-height: 100px;
+      font-size: 24px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+    
+    .active {
+      color: blue;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card-row">
+      <div class="card">0</div>
+      <div class="card">1</div>
+      <div class="card">2</div>
+    </div>
+    <div class="card-row">
+      <div class="card">3</div>
+      <div class="card">4</div>
+      <div class="card">5</div>
+    </div>
+    <div class="card-row">
+      <div class="card">6</div>
+      <div class="card">7</div>
+      <div class="card">8</div>
+    </div>
+    <div class="card-row">
+      <div class="card">9</div>
+    </div>
+  </div>
+
+  <script>
+    
+    var cards = document.getElementsByClassName('card');
+
+   
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].addEventListener('click', function() {
+         
+        this.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
+//В JS объявлен массив с ссылками на картинки. На основе этого массива формируется множество маленьких картинок в верхней части интерфейса. При нажатии на одну из картинок забирается ссылка на эту картинку и в нижней части интерфейса отображается в большем размере. Так, пользователь, нажимая на маленькие картинки видит их отображение
+в большем размере.
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .thumbnail-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+	.thumbnail {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.selected-thumbnail {
+  border: 2px solid blue;
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border: 1px solid gray;
+}
+
+.preview img {
+  max-width: 100%;
+  max-height: 100%;
+}
+ </style>
+</head>
+<body>
+  <div class="thumbnail-container">
+    <img class="thumbnail" src="images/image1.jpg" alt="Image 1">
+    <img class="thumbnail" src="images/image2.jpg" alt="Image 2">
+    <img class="thumbnail" src="images/image3.jpg" alt="Image 3">
+
+    
+    
+  </div>
+  <div class="preview">
+     
+  </div>
+  <script>
+    var thumbnails = document.getElementsByClassName('thumbnail');
+    var preview = document.querySelector('.preview');
+
+    for (var i = 0; i < thumbnails.length; i++) {
+      thumbnails[i].addEventListener('click', function() {
+        
+        for (var j = 0; j < thumbnails.length; j++) {
+          thumbnails[j].classList.remove('selected-thumbnail');
+        }
+
+        
+        this.classList.add('selected-thumbnail');
+
+         
+        var imageUrl = this.src;
+
+       
+        preview.innerHTML = '<img src="' + imageUrl + '" alt="Preview">';
+      });
+    }
+  </script>
+</body>
+</html>
+
+
+
+//Есть массив из объектов. Каждый объект имеет свойства en и ru. В свойстве en написано слово на английском, а в свойстве ru на русском. Необходимо реализовать карточки, при нажатии на которые слова с русского меняются на английский и обратно.
+Подсказка. В каждой карточке должно быть два параграфа. В одном написано на русском, а во втором на английском и при нажатии на карточку один параграф получает класс с display none а второй с display block.
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }
+	.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 100px;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.card .hidden {
+  display: none;
+}
+ </style>
+</head>
+<body>
+  <div class="card-container">
+    
+  </div>
+  <script>
+    var words = [
+      { en: 'apple', ru: 'яблоко' },
+      { en: 'car', ru: 'машина' },
+      { en: 'book', ru: 'книга' },
+      
+    ];
+
+    var cardContainer = document.querySelector('.card-container');
+
+    words.slice(0, 3).forEach(function(word) {
+      var card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = '<p class="ru">' + word.ru + '</p><p class="en hidden">' + word.en + '</p>';
+
+      card.addEventListener('click', function() {
+        var ruParagraph = this.querySelector('.ru');
+        var enParagraph = this.querySelector('.en');
+
+        if (ruParagraph.classList.contains('hidden')) {
+          ruParagraph.classList.remove('hidden');
+          enParagraph.classList.add('hidden');
+        } else {
+          ruParagraph.classList.add('hidden');
+          enParagraph.classList.remove('hidden');
+        }
+      });
+
+      cardContainer.appendChild(card);
+    });
+  </script>
+</body>
+</html>
+//Добавить внизу кнопки RU и EN при нажатии на которые все карточки переключаются на русский или английский соответственно.
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }
+	.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.card {
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 100px;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.card .hidden {
+  display: none;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+ </style>
+</head>
+<body>
+  <div class="card-container">
+    <!-- Здесь будут карточки с текстом -->
+  </div>
+  <div class="buttons-container">
+    <button class="button ru-button">RU</button>
+    <button class="button en-button">EN</button>
+  </div>
+  <script>
+    var words = [
+      { en: 'apple', ru: 'яблоко' },
+      { en: 'car', ru: 'машина' },
+      { en: 'book', ru: 'книга' },
+      // Добавьте остальные слова
+    ];
+
+    var cardContainer = document.querySelector('.card-container');
+    var ruButton = document.querySelector('.ru-button');
+    var enButton = document.querySelector('.en-button');
+
+    var currentLanguage = 'ru'; // Изначально установлен русский язык
+
+    function updateCardsLanguage() {
+      var paragraphs = document.querySelectorAll('.card p');
+
+      paragraphs.forEach(function(paragraph) {
+        var card = paragraph.parentNode;
+
+        if (currentLanguage === 'ru') {
+          paragraph.textContent = words.find(function(word) {
+            return word.en === paragraph.textContent;
+          }).ru;
+        } else if (currentLanguage === 'en') {
+          paragraph.textContent = words.find(function(word) {
+            return word.ru === paragraph.textContent;
+          }).en;
+        }
+      });
+    }
+
+    words.slice(0, 3).forEach(function(word) {
+      var card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = '<p class="ru">' + word.ru + '</p><p class="en hidden">' + word.en + '</p>';
+
+      card.addEventListener('click', function() {
+        var ruParagraph = this.querySelector('.ru');
+        var enParagraph = this.querySelector('.en');
+
+        if (ruParagraph.classList.contains('hidden')) {
+          ruParagraph.classList.remove('hidden');
+          enParagraph.classList.add('hidden');
+        } else {
+          ruParagraph.classList.add('hidden');
+          enParagraph.classList.remove('hidden');
+        }
+      });
+
+      cardContainer.appendChild(card);
+    });
+
+    ruButton.addEventListener('click', function() {
+      currentLanguage = 'ru';
+      updateCardsLanguage();
+    });
+
+    enButton.addEventListener('click', function() {
+      currentLanguage = 'en';
+      updateCardsLanguage();
+    });
+
+    updateCardsLanguage(); // Обновляем язык карточек при загрузке страницы
+  </script>
+</body>
+</html>
+//Написать цикл, который создает множество div-ов c цветами от rgb(128, 128, 0) до rgb(128, 128, 255). У дивов цвет должен меняться с шагом 5.
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      width: 200px;
+      height: 60px;
+      margin-right: 10px;
+      color: white;
+      text-align: center;
+      line-height: 60px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    var container = document.getElementById('container');
+    var colors = [];
+    var red = 128;
+    var green = 128;
+    var blue = 0;
+    var step = 5;
+
+    while (blue <= 255) {
+      var color = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
+      colors.push(color);
+      blue += step;
+    }
+
+    for (var i = 0; i < colors.length; i += 5) {
+      var row = document.createElement('div');
+      row.className = 'row';
+
+      for (var j = i; j < i + 5 && j < colors.length; j++) {
+        var div = document.createElement('div');
+        div.className = 'card';
+        div.style.backgroundColor = colors[j];
+        div.textContent = colors[j];
+        row.appendChild(div);
+      }
+
+      container.appendChild(row);
+    }
+  </script>
+</body>
+</html>
