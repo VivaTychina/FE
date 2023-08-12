@@ -1,0 +1,5 @@
+var f = function fact(x) {x <=1 ? 1 : x * fact(x-1)};
+document.write(f(3));
+
+var f = function fact(x) { return x <= 1 ? 1 : x * fact(x-1)};
+document.write(f(3));
