@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      nav ul ul {
+        display: none;
+      }
+      nav ul li:hover > ul {
+        display: block;
+      }
+      nav ul:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+      nav ul li {
+        float: left;
+        position: relative;
+        list-style-type: none;
+      }
+      nav ul li:hover {
+        background: rgba(19, 20, 123, 0.67);
+      }
+      nav ul li:hover a {
+        color: #fff;
+      }
+      nav ul li a {
+        display: block;
+        padding: 20px 30px;
+        color: #ffffff;
+        text-decoration: none;
+        background-color: rgba(35, 17, 134, 0.8);
+        font-family: sans-serif;
+      }
+      nav ul ul {
+        background: #5f6975;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+      }
+      nav ul ul li {
+        float: none;
+        position: relative;
+      }
+      nav ul ul li a {
+        padding: 15px 10px;
+        color: #ffffff;
+        text-transform: uppercase;
+      }
+      nav ul ul li a:hover {
+        background: rgba(19, 20, 123, 0.67);
+      }
+    </style>
+  </head>
+  <body>
+    <h1> HOMEWORK </h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.google.co.uk/">google</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com">facebook</a>
+          <ul>
+            <li>
+              <a href="https://www.amazon.de/-/en/ref=nav_logo">amazon</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/feed/">linkedin</a>
+            </li>
+            <li>
+              <a href="https://github.com">github</a>
+            </li>
+            <li>
+              <a href="https://www.ikea.com/de/de/shoppingcart/">ikea</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com">youtube</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://www.apple.com/ru/">apple</a>
+          <ul>
+            <li>
+              <a
+                href="https://translate.google.com/?hl=ru&sl=auto&tl=de&text=скатерть&op=translate"
+                >translate</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://de.shein.com/?utm_source=admitad.com&utm_medium=affiliate&admitad_uid=50530ad6c0e7ba439908258f88ecab27&affiliateID=277929&url_from=admitad.com&tagtag_uid=50530ad6c0e7ba439908258f88ecab27"
+                >shein</a
+              >
+            </li>
+            <li>
+              <a href="https://www.zara.com">zara</a>
+            </li>
+            <li>
+              <a href="https://www2.hm.com/de_de/index.html">hm</a>
+            </li>
+            <li>
+              <a href="https://www.bershka.com/de/">bershka</a>
+            </li>
+            <li>
+              <a
+                href="https://www.mediamarkt.de/de/product/_apple-iphone-14-pro-max-128-gb-dunkellila-dual-sim-2832774.html"
+                >mediamarkt</a>
+            </li>
+          </ul>
+        </li>
+        
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
